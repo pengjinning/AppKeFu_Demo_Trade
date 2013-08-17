@@ -5,11 +5,13 @@
 	<string name="appkefu_upload_picture">上传图片</string>
 	<string name="appkefu_send_message">发送</string>
 	<string name="appkefu_input_message_hint">输入内容</string>
-	<string name="appkefu_back">返回</string>
 	<string name="appkefu_clear_message">清空聊天消息</string>
 	<string name="appkefu_switch_sendmode">文字语音切换</string>
 	<string name="appkefu_biaoqing">表情</string>
 	<string name="appkefu_biaoqing_focuse">选中表情</string>
+	<string name="appkefu_press_to_speak">按住说话</string>
+	<string name="appkefu_imageview_content_description">描述</string>
+	<string name="appkefu_back">返回</string>
 	
 	<string name="appkefu_title_activity_chat_wx">ChatWxActivity</string>
     <string name="appkefu_menu_settings">Settings</string>
