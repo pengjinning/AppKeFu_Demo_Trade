@@ -50,12 +50,21 @@
         <item name="android:clickable">true</item>
     </style>
     
+	<style name="appkefu_anim_bottom" parent="@android:style/Animation">  
+    	<item name="android:windowEnterAnimation">@anim/appkefu_push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/appkefu_push_bottom_out</item>
+	</style>
 	
-	
-	
-	
-	
-	
+	<style name="appkefu_dialog_style_bottom" parent="android:Theme.Dialog" >
+        <item name="android:windowAnimationStyle">@style/appkefu_anim_bottom</item>
+        <item name="android:windowFrame">@null</item><!--边框-->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">true</item><!--半透明-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:windowBackground">@android:color/transparent</item><!--背景透明-->
+        <item name="android:backgroundDimEnabled">true</item><!--模糊-->        
+    </style>
+
 	
 </resources>
 

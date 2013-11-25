@@ -1,13 +1,16 @@
 package com.appkefu.appkehu_3;
 
-import com.appkefu.lib.ChatViewActivity;
-import com.appkefu.lib.service.UsernameAndKefu;
+
+import com.appkefu.lib.interfaces.KFInterfaces;
+import com.appkefu.lib.ui.activity.KFChatActivity;
 
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;
+
 import android.content.DialogInterface;
 import android.content.Intent;
+
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.View;
@@ -20,8 +23,6 @@ import android.widget.Toast;
 import android.widget.AdapterView.OnItemSelectedListener;
 
 public class HomeActivity extends Activity implements OnClickListener , OnItemSelectedListener{
-
-	private static final String SERIAL_KEY = "com.appkefu.lib.username.serialize";
 
 	/**
 	 * 品牌介绍
@@ -97,12 +98,18 @@ public class HomeActivity extends Activity implements OnClickListener , OnItemSe
 	private LinearLayout codeLinearLayout = null ; 
 	private GalleryImageAdapter adapter = null ;
 	
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main_home);
 						
+
+				
 		this.initTextViewAll();
+		
+		//第一步：登录
+		KFInterfaces.visitorLogin(this);
 	}
 
 	@Override
@@ -122,8 +129,9 @@ public class HomeActivity extends Activity implements OnClickListener , OnItemSe
 			Toast toast = Toast.makeText(getApplicationContext(), "添加成功!", Toast.LENGTH_SHORT);
 	   		toast.setGravity(Gravity.CENTER, 0, 0);
 	   		toast.show();
-		} else if (view == collectTextView) {			
-			startChat("testusername","admin");
+		} else if (view == collectTextView) {	
+			
+			chatWithKeFu("admin");
 			//Toast toast = Toast.makeText(getApplicationContext(), "收藏成功!", Toast.LENGTH_SHORT);
 	   		//toast.setGravity(Gravity.CENTER, 0, 0);
 	   		//toast.show();
@@ -142,6 +150,14 @@ public class HomeActivity extends Activity implements OnClickListener , OnItemSe
 		};	
 	}
 	
+
+	//启动咨询对话框
+	private void chatWithKeFu(String kefuUsername)
+	{
+		Intent intent = new Intent(this, KFChatActivity.class);
+		intent.putExtra("username", kefuUsername);			
+		startActivity(intent);
+	}
 	
 	/**
 	 * 加载(绑定)所有控件
@@ -214,22 +230,7 @@ public class HomeActivity extends Activity implements OnClickListener , OnItemSe
 		
 	}
 	
-	private void startChat(String username, String kefuName) {
-		
-		String jid = kefuName + "@appkefu.com";
-		Intent intent = new Intent(this, ChatViewActivity.class);
-		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
-		UsernameAndKefu usernameAndKefu = new UsernameAndKefu();
-		usernameAndKefu.setUsername(username);
-		usernameAndKefu.setKefuJID(jid);
-		
-		Bundle mbundle = new Bundle();
-		mbundle.putSerializable(SERIAL_KEY, usernameAndKefu);
-		intent.putExtras(mbundle);
-			
-		startActivity(intent);	
-    }
 
 }
 

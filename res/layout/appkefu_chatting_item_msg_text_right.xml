@@ -14,7 +14,8 @@
             android:id="@+id/tv_sendtime"
             style="@style/appkefu_chat_text_date_style"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />	        
+            android:layout_height="wrap_content"
+            android:background="@drawable/appkefu_textview_round_corner" />	        
 	    </LinearLayout>
 	
 	    <RelativeLayout

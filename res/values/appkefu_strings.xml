@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    
 	<string name="appkefu_sending_request">正在发送请求</string>
 	<string name="appkefu_push_to_speak">按住说话</string>
 	<string name="appkefu_upload_picture">上传图片</string>
@@ -13,10 +14,71 @@
 	<string name="appkefu_imageview_content_description">描述</string>
 	<string name="appkefu_back">返回</string>
 	
-	<string name="appkefu_title_activity_chat_wx">ChatWxActivity</string>
-    <string name="appkefu_menu_settings">Settings</string>
-    <string name="appkefu_hello_world">Hello world!</string>
     <string name="appkefu_appkey_is_invalide">appkey无效</string>
     <string name="appkefu_not_connected">未连接到服务器</string>
     
+    <string name="appkefu_change_password_successed">密码修改成功</string>
+    <string name="appkefu_make_blacklist_successed">拉黑成功</string>
+   	<string name="appkefu_failed_to_make_blacklist">拉黑失败</string>
+   	<string name="appkefu_choose_image_format_error">图片格式错误</string>  	
+   	<string name="add_friend_request_send">添加好友请求已发送</string>
+
+    <string name="appkefu_xmpp_manager_invalid_credentials">用户名或密码错误</string>
+    
+	<string name="appkefu_friend_allready_in_roster">已经为好友请勿重复发送请求</string>
+	
+    <string name="appkefu_chat_send_message">发送</string>
+    
+    <string name="appkefu_img_from_camera">手机拍照</string>
+    <string name="appkefu_img_from_album">手机相册</string>
+    <string name="appkefu_ui_insert_image">发送图片</string> 
+    <string name="appkefu_choose_image">请选择图片</string> 
+    <string name="appkefu_set_headview">设置头像</string>
+    
+    <string name="appkefu_title_activity_conversation">会话列表</string>
+    
+    <string name="appkefu_app_name"></string>
+    <string name="appkefu_recording" msgid="4426791467211376099">"录音"</string>
+    <string name="appkefu_recording_stopped" msgid="1580278719585249612">"录音停止"</string>
+    <string name="appkefu_storage_is_full" msgid="416039755956726221">"存储空间已满"</string>
+    <string name="appkefu_max_length_reached" msgid="6398215743584093353">"已达到长度上限"</string>
+    <string name="appkefu_insert_sd_card" msgid="2251831579676114197">"需要SD卡才可使用"</string>
+    <!-- no translation found for audio_db_title_format (7912182366970749312) -->
+    <skip />
+    <string name="appkefu_audio_db_artist_name" msgid="961640229118120080">"您的录音"</string>
+    <string name="appkefu_audio_db_album_name" msgid="9072588113803264440">"录音"</string>
+    <string name="appkefu_audio_db_playlist_name" msgid="5592939050047058162">"我的录音"</string>
+    <string name="appkefu_error_sdcard_access" msgid="8005660724361043509">"无法访问存储器"</string>
+    <string name="appkefu_error_app_internal" msgid="2365923237657572011">"内部应用程序错误"</string>
+    <string name="appkefu_error_mediadb_new_record" msgid="2225774949947938064">"无法保存录制的音频"</string>
+
+    <string name="appkefu_default_record_name">未命名录音</string>
+    <string name="appkefu_menu_view_record_list">查看录音列表</string>
+    <string name="appkefu_menu_setting">设置</string>
+    <string name="appkefu_overwrite_dialog_title">%s已存在。\n确定要覆盖这段录音吗？</string>
+    <string name="appkefu_preferences_title">设置</string>
+    <string name="appkefu_pref_title_record_type">录音文件类型</string>
+    <string name="appkefu_prefDialogTitle_recordType">请选择录音文件类型</string>
+    <string name="appkefu_pref_title_enable_high_quality">使用高质量录音</string>
+    <string name="appkefu_pref_summary_enable_high_quality">高质量录音会增大录音文件</string>
+    <string name="appkefu_pref_title_enable_sound_effect">打开音效</string>
+    <string name="appkefu_pref_summary_enable_sound_effect">操作录音机时播放音效</string>
+    <string name="appkefu_notification_recording">正在录音...</string>
+    <string name="appkefu_notification_stopped">录音已终止</string>
+    <string name="appkefu_notification_warning">存储空间不足(小于%d分钟)</string>
+    <string name="appkefu_sd_card_not_available">SD卡不存在</string>
+    <string name="appkefu_open_file_explorer">打开文件夹</string>
+    <string name="appkefu_alert_message_delete_record">确认要删除所选的录音吗?</string>    
+    
 </resources>
+
+
+
+
+
+
+
+
+
+
+

@@ -35,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
                 android:layout_marginTop="10dip"
-                android:src="@drawable/appkefu_amp1"
+                android:src="@drawable/appkefu_voice_amp1"
                 android:layout_marginBottom="10dip"
                  />
         </LinearLayout>
@@ -114,6 +114,28 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="15.0dip"
             android:text="时间太短"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/voice_rcd_hint_toolong"
+        android:layout_width="140.0dip"
+        android:layout_height="140.0dip"
+        android:background="@drawable/appkefu_voice_rcd_hint_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/appkefu_voice_to_short" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15.0dip"
+            android:text="时间太长"
             android:textColor="#ffffff" />
     </LinearLayout>
 
