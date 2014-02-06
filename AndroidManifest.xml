@@ -67,21 +67,21 @@
         <!-- 发送语音辅助service -->
         <service
             android:name="com.appkefu.lib.soundrecorder.KFRecorderService"
-            android:exported="false" >
-        </service>     
+            android:exported="true"/>     
         
         <!-- 主service -->       
-        <service 
-            android:enabled="true" 
-            android:name="com.appkefu.lib.service.KFMainService" 
-            android:exported="false">
+        <service android:name="com.appkefu.lib.service.KFMainService" android:exported="true">
             <intent-filter>
+                
+                <action android:name="com.appkefu.lib.action.CONNECT" />
                 <action android:name="com.appkefu.lib.action.DISCONNECT" />
                 <action android:name="com.appkefu.lib.action.TOGGLE" />
                 <action android:name="com.appkefu.lib.action.SEND" />
+                
+                <action android:name="com.appkefu.lib.action.NETWORK_STATUS_CHANGED"/>
                 <action android:name="com.appkefu.lib.action.COMMAND" />
-                <action android:name="com.appkefu.lib.action.XMPP.MESSAGE_RECEIVED"/>
-                <action android:name="com.appkefu.lib.action.XMPP.ACCOUNT_REGISTRATION"/>
+                <action android:name="com.appkefu.lib.action.XMPP.MESSAGE_RECEIVED" />
+
             </intent-filter>
         </service>
         
@@ -94,8 +94,7 @@
         </service>
 
         <!--  -->
-        <receiver 
-            android:name="com.appkefu.lib.receivers.KFPublicIntentReceiver">
+        <receiver android:name="com.appkefu.lib.receivers.KFPublicIntentReceiver">
             <intent-filter>
                 <action android:name="com.appkefu.lib.action.CONNECT" />
                 <action android:name="com.appkefu.lib.action.DISCONNECT" />
@@ -104,8 +103,7 @@
         </receiver> 
         
          <!-- 开机自动建立连接 -->        
-        <receiver 
-            android:name="com.appkefu.lib.receivers.KFBootReceiver">
+        <receiver android:name="com.appkefu.lib.receivers.KFBootReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <category android:name="android.intent.category.HOME" />
@@ -113,8 +111,7 @@
         </receiver>
         
         <!-- 连接电源自动建立连接 -->
-        <receiver 
-            android:name="com.appkefu.lib.receivers.KFPowerReceiver">
+        <receiver android:name="com.appkefu.lib.receivers.KFPowerReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
                 <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
@@ -122,11 +119,12 @@
         </receiver>
         
         <!-- 监听网络变化 -->
-        <receiver 
-            android:name="com.appkefu.lib.receivers.KFNetworkConnectivityReceiver" 
-            android:enabled="true" android:exported="true">
+        <receiver android:name="com.appkefu.lib.receivers.KFNetworkConnectivityReceiver" 
+            android:enabled="true"
+            android:exported="true">
              <intent-filter>
                  <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                 <action android:name="android.intent.action.PACKAGE_RESTARTED"/>
              </intent-filter>
         </receiver>
         
