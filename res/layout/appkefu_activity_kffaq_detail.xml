@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eee" >
+
+    <RelativeLayout
+        android:id="@+id/appkefu_faq_top_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/appkefu_title_bar" >
+
+        <Button
+            android:id="@+id/appkefu_faq_reback_btn"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/appkefu_title_btn_back"
+            android:text="返回"
+            android:textColor="#fff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/user_faq_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="常见问题"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        
+        <ProgressBar 
+			android:id="@+id/appkefu_faq_head_progress" 
+			style="@style/loading_small"
+			android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+			android:layout_marginRight="5dip"/>
+        
+    </RelativeLayout>
+    
+   <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appkefu_faq_top_layout"
+        android:fadingEdge="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/appkefu_layout_question"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/appkefu_preference_first_item"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/appkefu_question"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="问题"
+                    android:textColor="#000"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/appkefu_question_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/appkefu_question"
+                    android:padding="8dp"
+                    android:gravity="left"
+                    android:textSize="16sp"/>
+                
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/appkefu_layout_answer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/appkefu_preference_last_item"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/appkefu_answer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="答案"
+                    android:textColor="#000"
+                    android:textSize="17sp" />
+                
+                <TextView
+                    android:id="@+id/appkefu_answer_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/appkefu_answer"
+                    android:padding="8dp"
+                    android:gravity="left"
+                    android:textSize="16sp"/>
+            </RelativeLayout>
+            
+            <Button
+                android:id="@+id/appkefu_like_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/appkefu_btn_style_green"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+            
+            <Button
+                android:id="@+id/appkefu_hate_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/appkefu_btn_style_red"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+            
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+

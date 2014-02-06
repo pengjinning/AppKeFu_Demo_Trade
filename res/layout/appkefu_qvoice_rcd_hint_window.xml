@@ -5,12 +5,11 @@
     android:gravity="center" >
 
     <LinearLayout
-        android:id="@+id/voice_rcd_hint_rcding"
+        android:id="@+id/appkefu_voice_rcd_hint_rcding"
         android:layout_width="wrap_content"
         android:layout_height="140.0dip"
         android:gravity="bottom|center"
-        android:orientation="horizontal"
-         >
+        android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -22,7 +21,7 @@
             android:paddingLeft="25.0dip" >
 
             <ImageView
-                android:id="@+id/imageView1"
+                android:id="@+id/appkefu_voice_rcd_hint"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15.0dip"
@@ -30,7 +29,7 @@
                 android:src="@drawable/appkefu_voice_rcd_hint" />
 
             <ImageView
-                android:id="@+id/volume"
+                android:id="@+id/appkefu_voice_amp1"
                 android:layout_width="43sp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
@@ -41,7 +40,7 @@
         </LinearLayout>
 
         <ImageView
-            android:id="@+id/img1"
+            android:id="@+id/appkefu_voice_cancel_bg"
             android:layout_width="30.0dip"
             android:layout_height="30.0dip"
             android:layout_marginLeft="10.0dip"
@@ -51,7 +50,7 @@
             android:src="@drawable/appkefu_rcd_cancel_icon"  />
 
         <LinearLayout
-            android:id="@+id/del_re"
+            android:id="@+id/appkefu_voice_cancel_bg_focused"
             android:layout_width="140.0dip"
             android:layout_height="140.0dip"
             android:layout_marginLeft="10.0dip"
@@ -69,18 +68,17 @@
                 android:textSize="13.0dip" />
 
             <ImageView
-                android:id="@+id/sc_img1"
+                android:id="@+id/appkefu_voice_cancel_icon"
                 android:layout_width="75.0dip"
                 android:layout_height="75.0dip"
                 android:layout_marginTop="12.0dip"
-                android:src="@drawable/appkefu_rcd_cancel_icon"
-                
-                 />      
+                android:src="@drawable/appkefu_rcd_cancel_icon"/>      
         </LinearLayout>
+        
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/voice_rcd_hint_loading"
+        android:id="@+id/appkefu_voice_rcd_hint_loading"
         android:layout_width="140.0dip"
         android:layout_height="140.0dip"
         android:background="@drawable/appkefu_voice_rcd_hint_bg"
@@ -96,14 +94,14 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/voice_rcd_hint_tooshort"
+        android:id="@+id/appkefu_voice_rcd_hint_tooshort"
         android:layout_width="140.0dip"
         android:layout_height="140.0dip"
         android:background="@drawable/appkefu_voice_rcd_hint_bg"
         android:gravity="center"
         android:orientation="vertical"
         android:visibility="gone" >
-
+        
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -115,10 +113,11 @@
             android:layout_marginBottom="15.0dip"
             android:text="时间太短"
             android:textColor="#ffffff" />
+        
     </LinearLayout>
     
     <LinearLayout
-        android:id="@+id/voice_rcd_hint_toolong"
+        android:id="@+id/appkefu_voice_rcd_hint_toolong"
         android:layout_width="140.0dip"
         android:layout_height="140.0dip"
         android:background="@drawable/appkefu_voice_rcd_hint_bg"

@@ -70,6 +70,18 @@
     <string name="appkefu_open_file_explorer">打开文件夹</string>
     <string name="appkefu_alert_message_delete_record">确认要删除所选的录音吗?</string>    
     
+    <string name="appkefu_pull_to_refresh_pull_label">下拉可以刷新</string>
+    <string name="appkefu_pull_to_refresh_refreshing_label">加载中...</string>
+    <string name="appkefu_pull_to_refresh_release_label">松开可以刷新</string>
+    <string name="appkefu_pull_to_refresh_tap_label">下拉可以刷新</string>
+    <string name="appkefu_pull_to_refresh_update">最近更新：</string>
+    
+    <string name="appkefu_load_more">更多</string>
+    <string name="appkefu_load_ing">加载中···</string>
+    <string name="appkefu_load_full">已加载全部</string>
+    <string name="appkefu_load_empty">暂无数据</string>
+    <string name="appkefu_load_error">加载数据出错</string>
+    
 </resources>
 
 

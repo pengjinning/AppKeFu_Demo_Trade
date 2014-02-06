@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/appkefu_sc_lab_bar_avatar_bg" android:state_pressed="true"/>
+    <item android:drawable="@drawable/appkefu_sc_lab_bar_avatar_bg" android:state_selected="true"/>
+    <item android:drawable="@drawable/appkefu_sc_messagebubble_bg_nor"/>
+
+</selector>
+
+
+
+
+
+
+
+
+
+

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.appkefu.lib.ui.activity.KFResizeLayout 
+<com.appkefu.ui.activity.ResizeLayout 
     
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/appkefu_chat_bg_default" >
+    android:background="@drawable/appkefu_chat_bg_default">
 
     <!-- 标题栏 -->
 
@@ -28,8 +28,8 @@
 
         <TextView
             android:id="@+id/chat_name"
-            android:layout_width="wrap_content"
-            android:layout_height="25dp"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
             android:layout_centerInParent="true"
             android:ellipsize="end"
             android:textColor="#ffffff"
@@ -42,12 +42,12 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="5dp"
-            android:background="@drawable/appkefu_title_btn_right"
-            android:src="@drawable/appkefu_title_btn_function" />
+            android:background="@drawable/appkefu_title_btn_right" />
+        
     </RelativeLayout>
 
     <!-- 聊天内容 listview -->
-    <ListView
+    <com.appkefu.ui.activity.DragListView
         android:id="@+id/listview"
         android:scrollbars="vertical" 
         android:transcriptMode="alwaysScroll" 
@@ -58,7 +58,7 @@
         android:cacheColorHint="#0000"
         android:divider="@null"
         android:scrollbarStyle="outsideOverlay"
-        android:stackFromBottom="true" />
+        android:stackFromBottom="true"/>
     <!-- 录音显示UI层 -->
 
     <LinearLayout
@@ -95,6 +95,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dip"
+                android:contentDescription="switch"
                 android:paddingBottom="4.0dip"
                 android:paddingTop="5.0dip"
                 android:src="@drawable/appkefu_chatting_setmode_msg_btn" />
@@ -192,6 +193,16 @@
                 android:paddingTop="5.0dip"
                 android:src="@drawable/appkefu_app_panel_pic_icon" />
             
+            <ImageView 
+                android:id="@+id/chatting_location_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0.0dip"
+                android:paddingBottom="4.0dip"
+                android:paddingTop="5.0dip"
+                android:src="@drawable/appkefu_app_panel_location_icon"
+                />
+            
         </LinearLayout>
 
         <android.support.v4.view.ViewPager
@@ -237,5 +248,4 @@
         </LinearLayout>
     </RelativeLayout>
 
-</com.appkefu.lib.ui.activity.KFResizeLayout>
-
+</com.appkefu.ui.activity.ResizeLayout>

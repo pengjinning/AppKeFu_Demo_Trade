@@ -4,7 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/appkefu_chat_bg_default" >
+    android:background="@drawable/appkefu_chat_bg_default">
 
     <!-- 标题栏 -->
 
@@ -28,7 +28,7 @@
 
         <TextView
             android:id="@+id/chat_name"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="25dp"
             android:layout_centerInParent="true"
             android:ellipsize="end"
@@ -43,11 +43,12 @@
             android:layout_centerVertical="true"
             android:layout_marginRight="5dp"
             android:background="@drawable/appkefu_title_btn_right"
-            android:src="@drawable/appkefu_title_btn_function" />
+            android:src="@drawable/appkefu_title_btn_function"/>
+        
     </RelativeLayout>
 
     <!-- 聊天内容 listview -->
-    <ListView
+	<ListView
         android:id="@+id/listview"
         android:scrollbars="vertical" 
         android:transcriptMode="alwaysScroll" 
@@ -95,6 +96,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dip"
+                android:contentDescription="switch"
                 android:paddingBottom="4.0dip"
                 android:paddingTop="5.0dip"
                 android:src="@drawable/appkefu_chatting_setmode_msg_btn" />
@@ -192,6 +194,17 @@
                 android:paddingTop="5.0dip"
                 android:src="@drawable/appkefu_app_panel_pic_icon" />
             
+            <ImageView 
+                android:id="@+id/chatting_location_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0.0dip"
+                android:paddingBottom="4.0dip"
+                android:paddingTop="5.0dip"
+                android:src="@drawable/appkefu_app_panel_location_icon"
+                android:visibility="gone"
+                />
+            
         </LinearLayout>
 
         <android.support.v4.view.ViewPager
@@ -238,4 +251,3 @@
     </RelativeLayout>
 
 </com.appkefu.lib.ui.activity.KFResizeLayout>
-

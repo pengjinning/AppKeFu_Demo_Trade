@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.appkefu.lib.ui.activity.KFResizeLayout 
+<com.appkefu.lib.ui.activity.KFQResizeLayout 
     
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
@@ -7,16 +7,15 @@
     android:background="@drawable/appkefu_chat_bg_default" >
 
     <!-- 标题栏 -->
-
     <RelativeLayout
-        android:id="@+id/rl_layout"
+        android:id="@+id/appkefu_top_layout"
         android:layout_width="fill_parent"
         android:layout_height="45dp"
         android:background="@drawable/appkefu_title_bar"
         android:gravity="center_vertical" >
 
         <Button
-            android:id="@+id/btn_back"
+            android:id="@+id/appkefu_btn_back"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -27,7 +26,7 @@
             android:textSize="14sp" />
 
         <TextView
-            android:id="@+id/chat_name"
+            android:id="@+id/appkefu_win_title"
             android:layout_width="wrap_content"
             android:layout_height="25dp"
             android:layout_centerInParent="true"
@@ -36,7 +35,7 @@
             android:textSize="18sp" />
 
         <ImageButton
-            android:id="@+id/right_btn"
+            android:id="@+id/appkefu_right_btn"
             android:layout_width="67dp"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -44,25 +43,26 @@
             android:layout_marginRight="5dp"
             android:background="@drawable/appkefu_title_btn_right"
             android:src="@drawable/appkefu_title_btn_function" />
+        
     </RelativeLayout>
 
     <!-- 聊天内容 listview -->
     <ListView
-        android:id="@+id/listview"
+        android:id="@+id/appkefu_listview"
         android:scrollbars="vertical" 
         android:transcriptMode="alwaysScroll" 
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/rl_bottom"
-        android:layout_below="@+id/rl_layout"
+        android:layout_below="@+id/appkefu_top_layout"
         android:cacheColorHint="#0000"
         android:divider="@null"
         android:scrollbarStyle="outsideOverlay"
         android:stackFromBottom="true" />
+    
     <!-- 录音显示UI层 -->
-
     <LinearLayout
-        android:id="@+id/rcChat_popup"
+        android:id="@+id/appkefu_qvoice_rcd_hint_window"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:gravity="center"
@@ -72,7 +72,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            layout="@layout/appkefu_voice_rcd_hint_window" />
+            layout="@layout/appkefu_qvoice_rcd_hint_window" />
+        
     </LinearLayout>
 
     <!-- 底部按钮以及 编辑框 -->
@@ -119,14 +120,14 @@
                 android:visibility="gone" />
 
             <RelativeLayout
-                android:id="@+id/btn_bottom"
+                android:id="@+id/appkefu_btn_bottom"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:paddingBottom="4.0dip"
                 android:paddingTop="5.0dip" >
 
                 <Button
-                    android:id="@+id/btn_send"
+                    android:id="@+id/appkefu_btn_send"
                     android:layout_width="60dp"
                     android:layout_height="40dp"
                     android:layout_alignParentRight="true"
@@ -143,7 +144,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
-                    android:layout_toLeftOf="@id/btn_send"
+                    android:layout_toLeftOf="@id/appkefu_btn_send"
                     android:background="@drawable/appkefu_login_edit_normal"
                     android:imeOptions="actionSend|flagNoEnterAction"
                     android:inputType="textCapSentences|textAutoCorrect|textMultiLine|textShortMessage"
@@ -153,7 +154,7 @@
             </RelativeLayout>
 
             <TextView
-                android:id="@+id/btn_rcd"
+                android:id="@+id/appkefu_record_btn"
                 android:layout_width="fill_parent"
                 android:layout_height="40dp"
                 android:layout_marginLeft="10dp"
@@ -237,5 +238,5 @@
         </LinearLayout>
     </RelativeLayout>
 
-</com.appkefu.lib.ui.activity.KFResizeLayout>
+</com.appkefu.lib.ui.activity.KFQResizeLayout>
 

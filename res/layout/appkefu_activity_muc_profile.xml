@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/empty_cart_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eee" >
+
+    <RelativeLayout
+        android:id="@+id/add_friends_top_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/appkefu_title_bar" >
+
+        <Button
+            android:id="@+id/add_friends_reback_btn"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/appkefu_title_btn_back"
+            android:text="@string/appkefu_back"
+            android:textColor="#fff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/user_profile_title"
+            android:layout_width="160dp"
+            android:layout_height="25dp"
+            android:ellipsize="end"
+            android:layout_centerInParent="true"
+            android:text="群资料"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_friends_top_layout"
+        android:fadingEdge="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            
+            <RelativeLayout 
+                android:id="@+id/layout_group_id"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/appkefu_preference_first_item"
+                android:clickable="true"
+                android:gravity="center_vertical">
+                
+                <TextView
+                    android:id="@+id/group_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="群ID"
+                    android:textColor="#000"
+                    android:textSize="17sp" /> 
+                    
+                <TextView
+                    android:id="@+id/group_id_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_toRightOf="@+id/group_id"
+                    android:ellipsize="end"
+                    android:padding="8dp"
+                    android:gravity="right"
+                    android:textSize="16sp"/>  
+                    
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_group_nickname"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/appkefu_preference_item"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/group_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="群昵称"
+                    android:textColor="#000"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/group_nickname_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_toRightOf="@+id/group_nickname"
+                    android:ellipsize="end"
+                    android:padding="8dp"
+                    android:gravity="right"
+                    android:textSize="16sp"/>               
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/layout_group_description"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/appkefu_preference_item"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/group_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="群描述"
+                    android:textColor="#000"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/group_description_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_toRightOf="@+id/group_description"
+                    android:ellipsize="end"
+                    android:padding="8dp"
+                    android:gravity="right"
+                    android:textSize="16sp"/>               
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/layout_group_subject"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/appkefu_preference_item"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/group_subject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="群主题"
+                    android:textColor="#000"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/group_subject_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_toRightOf="@+id/group_subject"
+                    android:ellipsize="end"
+                    android:padding="8dp"
+                    android:gravity="right"
+                    android:textSize="16sp"/>               
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_group_occupants"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/appkefu_preference_last_item"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/group_occupants"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="当前在线人数"
+                    android:textColor="#000"
+                    android:textSize="17sp" />
+                
+                <TextView
+                    android:id="@+id/group_occupants_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_toRightOf="@+id/group_occupants"
+                    android:ellipsize="end"
+                    android:padding="8dp"
+                    android:gravity="right"
+                    android:textSize="16sp"/>            
+            </RelativeLayout>
+            
+            <Button
+                android:id="@+id/make_it_black"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/appkefu_btn_style_green"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="清空聊天记录"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+            
+            <Button
+                android:id="@+id/make_a_friend"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/appkefu_btn_style_red"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="退出该群"
+                android:textColor="#fff"
+                android:textSize="18sp" /> 
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

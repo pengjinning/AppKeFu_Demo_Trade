@@ -107,9 +107,6 @@ public class HomeActivity extends Activity implements OnClickListener , OnItemSe
 
 				
 		this.initTextViewAll();
-		
-		//第一步：登录
-		KFInterfaces.visitorLogin(this);
 	}
 
 	@Override
@@ -154,9 +151,10 @@ public class HomeActivity extends Activity implements OnClickListener , OnItemSe
 	//启动咨询对话框
 	private void chatWithKeFu(String kefuUsername)
 	{
-		Intent intent = new Intent(this, KFChatActivity.class);
-		intent.putExtra("username", kefuUsername);			
-		startActivity(intent);
+		KFInterfaces.startChatWithKeFu(this,
+				kefuUsername, //客服用户名
+				"您好，我是微客服小秘书，请问有什么可以帮您的?",  //问候语
+				"咨询客服");//会话窗口标题
 	}
 	
 	/**
