@@ -56,77 +56,55 @@
 
         <!-- 聊天窗口, 可通过修改layout文件appkefu_chat_activity.xml自定义窗口UI -->
         <activity android:name="com.appkefu.lib.ui.activity.KFChatActivity" />
+        <!-- 队列会话窗口，可通过修改layout问题appkefu_qchat_activity.xml自定义窗口UI -->
+        <activity android:name="com.appkefu.lib.ui.activity.KFQChatActivity" />
+        <!--  -->
+        <activity android:name="com.appkefu.lib.ui.activity.KFFAQSectionsActivity"/>
+        <activity android:name="com.appkefu.lib.ui.activity.KFFAQActivity" />
+        <activity android:name="com.appkefu.lib.ui.activity.KFFAQDetailActivity" />
         <!-- 客服个人资料窗口 -->
-        <activity android:name="com.appkefu.lib.ui.activity.KFProfileActivity"/>
+        <activity android:name="com.appkefu.lib.ui.activity.KFProfileActivity" />
         <!-- 验证消息窗口，可通过修改layout文件appkefu_activity_subscribe_notification.xml自定义窗口UI -->
         <activity android:name="com.appkefu.lib.ui.activity.KFSubscribeNotificationActivity" />
+        <activity android:name="com.appkefu.lib.ui.activity.KFMUCChatActivity" />
+        <activity android:name="com.appkefu.lib.ui.activity.KFMUCProfileActivity" />
 
-        <activity android:name="com.appkefu.lib.ui.activity.KFSelectPicActivity"
+        <!-- <activity android:name="com.appkefu.lib.ui.activity.KFLocationMapActivity"/> -->
+
+        <activity
+            android:name="com.appkefu.lib.ui.activity.KFSelectPicActivity"
             android:theme="@style/appkefu_dialog_style_bottom" />
-        
+
         <!-- 发送语音辅助service -->
         <service
             android:name="com.appkefu.lib.soundrecorder.KFRecorderService"
-            android:exported="true"/>     
-        
-        <!-- 主service -->       
-        <service android:name="com.appkefu.lib.service.KFMainService" android:exported="true">
+            android:exported="true" >
+        </service>
+
+        <!-- 主service -->
+        <service
+            android:name="com.appkefu.lib.service.KFMainService"
+            android:enabled="true"
+            android:exported="true" >
             <intent-filter>
-                
                 <action android:name="com.appkefu.lib.action.CONNECT" />
                 <action android:name="com.appkefu.lib.action.DISCONNECT" />
                 <action android:name="com.appkefu.lib.action.TOGGLE" />
                 <action android:name="com.appkefu.lib.action.SEND" />
-                
-                <action android:name="com.appkefu.lib.action.NETWORK_STATUS_CHANGED"/>
-                <action android:name="com.appkefu.lib.action.COMMAND" />
+                <action android:name="com.appkefu.lib.action.NETWORK_STATUS_CHANGED" />
                 <action android:name="com.appkefu.lib.action.XMPP.MESSAGE_RECEIVED" />
-
             </intent-filter>
         </service>
-        
-        <!-- 获取OpenUDID, 专用于客服 -->
-        <service 
-            android:name="org.OpenUDID.OpenUDID_service">
-            <intent-filter>
-                <action android:name="org.openudid.GETUDID"/>
-            </intent-filter>
-        </service>
-
-        <!--  -->
-        <receiver android:name="com.appkefu.lib.receivers.KFPublicIntentReceiver">
-            <intent-filter>
-                <action android:name="com.appkefu.lib.action.CONNECT" />
-                <action android:name="com.appkefu.lib.action.DISCONNECT" />
-                <action android:name="com.appkefu.lib.action.TOGGLE" />
-            </intent-filter>    
-        </receiver> 
-        
-         <!-- 开机自动建立连接 -->        
-        <receiver android:name="com.appkefu.lib.receivers.KFBootReceiver">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <category android:name="android.intent.category.HOME" />
-            </intent-filter>
-        </receiver>
-        
-        <!-- 连接电源自动建立连接 -->
-        <receiver android:name="com.appkefu.lib.receivers.KFPowerReceiver">
-            <intent-filter>
-                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
-                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
-            </intent-filter>
-        </receiver>
         
         <!-- 监听网络变化 -->
-        <receiver android:name="com.appkefu.lib.receivers.KFNetworkConnectivityReceiver" 
-            android:enabled="true"
-            android:exported="true">
-             <intent-filter>
-                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
-                 <action android:name="android.intent.action.PACKAGE_RESTARTED"/>
-             </intent-filter>
-        </receiver>
+        <receiver android:name="com.appkefu.lib.receivers.KFNetworkConnectivityReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>         
+        
+        <!-- 检测链接状态 -->
+        <receiver android:name="com.appkefu.lib.receivers.KFAlarmReceiver"/>
         
     </application>
 

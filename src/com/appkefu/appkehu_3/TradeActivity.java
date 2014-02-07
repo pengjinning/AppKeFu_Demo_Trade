@@ -4,22 +4,15 @@ import org.jivesoftware.smack.util.StringUtils;
 
 import com.appkefu.lib.interfaces.KFInterfaces;
 import com.appkefu.lib.service.KFMainService;
-import com.appkefu.lib.service.KFSettingsManager;
 import com.appkefu.lib.service.KFXmppManager;
-import com.appkefu.lib.utils.KFSLog;
+import com.appkefu.lib.utils.KFLog;
 
 import android.os.Bundle;
-import android.os.IBinder;
-import android.app.AlertDialog;
 import android.app.TabActivity;
 import android.content.BroadcastReceiver;
-import android.content.ComponentName;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.ServiceConnection;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.RadioButton;
@@ -58,9 +51,9 @@ public class TradeActivity extends TabActivity {
 		initTab();
         init();
         ExitManager.getInstance().addActivity(this);
-        
-		//设置开发者调试模式，默认为true，如要关闭开发者模式，请设置为false
-		KFSettingsManager.getSettingsManager(this).setDebugMode(true);
+
+        //设置开发者调试模式，默认为false，如要开启开发者模式，请设置为true
+      	KFInterfaces.enableDebugMode(this, true);
 		//第一步：登录
 		KFInterfaces.visitorLogin(this);
 	}
@@ -68,7 +61,7 @@ public class TradeActivity extends TabActivity {
 	@Override
 	protected void onStart() {
 		super.onStart();
-		KFSLog.d("onStart");
+		KFLog.dd("onStart");
 		
 		IntentFilter intentFilter = new IntentFilter();
 		//监听网络连接变化情况
@@ -83,7 +76,7 @@ public class TradeActivity extends TabActivity {
 	@Override
 	protected void onStop() {
 		super.onStop();
-		KFSLog.d("onStop");
+		KFLog.dd("onStop");
 		
         unregisterReceiver(mXmppreceiver);
 	}
@@ -105,7 +98,7 @@ public class TradeActivity extends TabActivity {
 	            	String body = intent.getStringExtra("body");
 	            	String from = StringUtils.parseName(intent.getStringExtra("from"));
 	            	
-	            	KFSLog.d("body:"+body+" from:"+from);
+	            	KFLog.dd("body:"+body+" from:"+from);
 	            }
 	        }
 	    };
@@ -116,7 +109,7 @@ public class TradeActivity extends TabActivity {
 
 	    	switch (status) {
 	            case KFXmppManager.CONNECTED:
-	            	KFSLog.d("connected");
+	            	KFLog.dd("connected");
 	            	//mTitle.setText("微客服(客服Demo)");
 
 	        		//设置昵称，否则在客服客户端 看到的会是一串字符串(必须在登录成功之后才能调用，才有效)
@@ -124,20 +117,20 @@ public class TradeActivity extends TabActivity {
 
 	                break;
 	            case KFXmppManager.DISCONNECTED:
-	            	KFSLog.d("disconnected");
+	            	KFLog.dd("disconnected");
 	            	//mTitle.setText("微客服(客服Demo)(未连接)");
 	                break;
 	            case KFXmppManager.CONNECTING:
-	            	KFSLog.d("connecting");
+	            	KFLog.dd("connecting");
 	            	//mTitle.setText("微客服(客服Demo)(登录中...)");
 	            	break;
 	            case KFXmppManager.DISCONNECTING:
-	            	KFSLog.d("connecting");
+	            	KFLog.dd("connecting");
 	            	//mTitle.setText("微客服(客服Demo)(登出中...)");
 	                break;
 	            case KFXmppManager.WAITING_TO_CONNECT:
 	            case KFXmppManager.WAITING_FOR_NETWORK:
-	            	KFSLog.d("waiting to connect");
+	            	KFLog.dd("waiting to connect");
 	            	//mTitle.setText("微客服(客服Demo)(等待中)");
 	                break;
 	            default:
@@ -203,6 +196,7 @@ public class TradeActivity extends TabActivity {
 				.setContent(new Intent(this, MoreActivity.class)));
     }
     
+    /*
     public boolean dispatchKeyEvent( KeyEvent event) {
 		int keyCode=event.getKeyCode();
 	      if (keyCode == KeyEvent.KEYCODE_BACK) {
@@ -231,7 +225,7 @@ public class TradeActivity extends TabActivity {
 		}
 		return super.dispatchKeyEvent(event);
 	}
-
+     */
 
 }
 
