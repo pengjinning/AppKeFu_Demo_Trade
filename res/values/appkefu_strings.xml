@@ -82,6 +82,26 @@
     <string name="appkefu_load_empty">暂无数据</string>
     <string name="appkefu_load_error">加载数据出错</string>
     
+    <string name="appkefu_comment_title">调查</string>
+    <string name="appkefu_comment_description">请为此客服打分</string>
+    <string name="appkefu_comment_good">满意</string>
+    <string name="appkefu_comment_ok">一般</string>
+    <string name="appkefu_comment_bad">很差</string>
+    <string name="appkefu_comment_thanks">多谢您的评价</string>
+    <string name="appkefu_comment_request">客服发起满意度评价</string>
+    
+    <string name="appkefu_minuites_ago">分钟前</string>
+    <string name="appkefu_hours_ago">小时前</string>
+    <string name="appkefu_yestoday">昨天</string>
+    <string name="appkefu_the_day_before_yestoday">前天</string>
+    <string name="appkefu_days_ago">天前</string>
+    
+    <string name="appkefu_offline">离线</string>
+    <string name="appkefu_exit_asure">退出会话将收不到客服消息,继续?</string>
+    <string name="appkefu_ok">确定</string>
+    <string name="appkefu_cancel">取消</string>
+    <string name="appkefu_visitor_already_gone">访客已经离开</string>
+    
 </resources>
 
 

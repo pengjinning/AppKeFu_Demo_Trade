@@ -47,7 +47,7 @@
     </RelativeLayout>
 
     <!-- 聊天内容 listview -->
-    <ListView
+    <com.appkefu.lib.utils.KFPullToRefreshListView
         android:id="@+id/listview"
         android:scrollbars="vertical" 
         android:transcriptMode="alwaysScroll" 

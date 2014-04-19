@@ -128,7 +128,7 @@ public class HomeActivity extends Activity implements OnClickListener , OnItemSe
 	   		toast.show();
 		} else if (view == collectTextView) {	
 			
-			chatWithKeFu("admin");
+			chatWithKeFu("your_kefu_username");
 			//Toast toast = Toast.makeText(getApplicationContext(), " ’≤ÿ≥…π¶!", Toast.LENGTH_SHORT);
 	   		//toast.setGravity(Gravity.CENTER, 0, 0);
 	   		//toast.show();
